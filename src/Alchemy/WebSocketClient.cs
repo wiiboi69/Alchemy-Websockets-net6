@@ -152,7 +152,7 @@ namespace Alchemy
             {
                 _context = new Context(null, _client);
                 _context.BufferSize = 512;
-                _context.UserContext.DataFrame = new DataFrame();
+                _context.UserContext.DataFrame_data = new DataFrame();
                 _context.UserContext.SetOnConnect(OnConnect);
                 _context.UserContext.SetOnConnected(OnConnected);
                 _context.UserContext.SetOnDisconnect(OnDisconnect);
@@ -243,7 +243,7 @@ namespace Alchemy
 
         private bool CheckAuthenticationResponse(Context context)
         {
-            var receivedData = context.UserContext.DataFrame.ToString();
+            var receivedData = context.UserContext.DataFrame_data.ToString();
             var header = new Header(receivedData);
             var handshake = new ServerHandshake(header);
 
@@ -283,9 +283,9 @@ namespace Alchemy
             {
                 var someBytes = new byte[context.ReceivedByteCount];
                 Array.Copy(context.Buffer, 0, someBytes, 0, context.ReceivedByteCount);
-                context.UserContext.DataFrame.Append(someBytes);
+                context.UserContext.DataFrame_data.Append(someBytes);
                 var authenticated = CheckAuthenticationResponse(context);
-                context.UserContext.DataFrame.Reset();
+                context.UserContext.DataFrame_data.Reset();
 
                 if (!authenticated)
                 {
@@ -294,11 +294,11 @@ namespace Alchemy
             }
             else
             {
-                context.UserContext.DataFrame.Append(context.Buffer, true);
-                if (context.UserContext.DataFrame.State == Handlers.WebSocket.DataFrame.DataState.Complete)
+                context.UserContext.DataFrame_data.Append(context.Buffer, true);
+                if (context.UserContext.DataFrame_data.State == Handlers.WebSocket.DataFrame.DataState.Complete)
                 {
                     context.UserContext.OnReceive();
-                    context.UserContext.DataFrame.Reset();
+                    context.UserContext.DataFrame_data.Reset();
                 }
             }
         }

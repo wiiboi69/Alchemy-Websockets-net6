@@ -180,7 +180,7 @@ namespace Alchemy.Classes
         /// <param name="close">if set to <c>true</c> [close].</param>
         public void Send(String aString, bool raw = false, bool close = false)
         {
-            DataFrame dataFrame = DataFrame.CreateInstance();
+            DataFrame dataFrame = DataFrame_data.CreateInstance();
             dataFrame.Append(aString);
             Context.Handler.Send(dataFrame, Context, raw, close);
         }
@@ -193,7 +193,7 @@ namespace Alchemy.Classes
         /// <param name="close">if set to <c>true</c> [close].</param>
         public void Send(byte[] someBytes, bool raw = false, bool close = false)
         {
-            DataFrame dataFrame = DataFrame.CreateInstance();
+            DataFrame dataFrame = DataFrame_data.CreateInstance();
             dataFrame.IsByte = true;
             dataFrame.Append(someBytes);
             Context.Handler.Send(dataFrame, Context, raw, close);

@@ -98,13 +98,13 @@ namespace Alchemy.Handlers
                     case Protocol.WebSocketHybi00:
                         context.Handler.UnregisterContext(context);
                         context.Handler = WebSocket.hybi00.Handler.Instance;
-                        context.UserContext.DataFrame = new WebSocket.hybi00.DataFrame();
+                        context.UserContext.DataFrame_data = new WebSocket.hybi00.DataFrame();
                         context.Handler.RegisterContext(context);
                         break;
                     case Protocol.WebSocketRFC6455:
                         context.Handler.UnregisterContext(context);
                         context.Handler = WebSocket.rfc6455.Handler.Instance;
-                        context.UserContext.DataFrame = new WebSocket.rfc6455.DataFrame();
+                        context.UserContext.DataFrame_data = new WebSocket.rfc6455.DataFrame();
                         context.Handler.RegisterContext(context);
                         break;
                     default:

@@ -1,7 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\vs_Source\\Repos\\Alchemy-Websockets-net6\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{45486CDE-86A3-4769-952F-E0821BF79493}|src\\Alchemy\\Alchemy.csproj|c:\\vs_source\\repos\\alchemy-websockets-net6\\src\\alchemy\\websocketserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45486CDE-86A3-4769-952F-E0821BF79493}|src\\Alchemy\\Alchemy.csproj|solutionrelative:src\\alchemy\\websocketserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,6 +51,19 @@
             {
               "$type": "Bookmark",
               "Name": "ST:3:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "WebSocketServer.cs",
+              "DocumentMoniker": "C:\\vs_Source\\Repos\\Alchemy-Websockets-net6\\src\\Alchemy\\WebSocketServer.cs",
+              "RelativeDocumentMoniker": "src\\Alchemy\\WebSocketServer.cs",
+              "ToolTip": "C:\\vs_Source\\Repos\\Alchemy-Websockets-net6\\src\\Alchemy\\WebSocketServer.cs",
+              "RelativeToolTip": "src\\Alchemy\\WebSocketServer.cs",
+              "ViewState": "AQIAAJsAAAAAAAAAAAA8wAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-24T16:26:15.77Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",

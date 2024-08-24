@@ -156,11 +156,11 @@ namespace Alchemy.Classes
         /// </summary>
         public void Reset()
         {
-            if (UserContext.DataFrame != null)
+            if (UserContext.DataFrame_data != null)
             {
-                if (UserContext.DataFrame.State == DataFrame.DataState.Complete)
+                if (UserContext.DataFrame_data.State == DataFrame.DataState.Complete)
                 {
-                    UserContext.DataFrame.Reset();
+                    UserContext.DataFrame_data.Reset();
                 }
             }
             ReceivedByteCount = 0;

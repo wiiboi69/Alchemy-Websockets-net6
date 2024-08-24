@@ -14,25 +14,25 @@ namespace Alchemy.Handlers.WebSocket
         {
             if (context.IsSetup)
             {
-                context.UserContext.DataFrame.Append(context.Buffer, true);
-                if (context.UserContext.DataFrame.Length <= context.MaxFrameSize)
+                context.UserContext.DataFrame_data.Append(context.Buffer, true);
+                if (context.UserContext.DataFrame_data.Length <= context.MaxFrameSize)
                 {
-                    switch (context.UserContext.DataFrame.State)
+                    switch (context.UserContext.DataFrame_data.State)
                     {
                         case DataFrame.DataState.Complete:
                             context.UserContext.OnReceive();
                             break;
                         case DataFrame.DataState.Closed:
-                            DataFrame closeFrame = context.UserContext.DataFrame.CreateInstance();
+                            DataFrame closeFrame = context.UserContext.DataFrame_data.CreateInstance();
 							closeFrame.State = DataFrame.DataState.Closed;
 							closeFrame.Append(new byte[] { 0x8 }, true);
 							context.UserContext.Send(closeFrame, false, true);
                             break;
                         case DataFrame.DataState.Ping:
-                            context.UserContext.DataFrame.State = DataFrame.DataState.Complete;
-                            DataFrame dataFrame = context.UserContext.DataFrame.CreateInstance();
+                            context.UserContext.DataFrame_data.State = DataFrame.DataState.Complete;
+                            DataFrame dataFrame = context.UserContext.DataFrame_data.CreateInstance();
                             dataFrame.State = DataFrame.DataState.Pong;
-                            List<ArraySegment<byte>> pingData = context.UserContext.DataFrame.AsRaw();
+                            List<ArraySegment<byte>> pingData = context.UserContext.DataFrame_data.AsRaw();
                             foreach (var item in pingData)
                             {
                                 dataFrame.Append(item.Array);
@@ -40,7 +40,7 @@ namespace Alchemy.Handlers.WebSocket
                             context.UserContext.Send(dataFrame);
                             break;
                         case DataFrame.DataState.Pong:
-                            context.UserContext.DataFrame.State = DataFrame.DataState.Complete;
+                            context.UserContext.DataFrame_data.State = DataFrame.DataState.Complete;
                             break;
                     }
                 }
