@@ -6,6 +6,8 @@ this is a dot net6 port of Alchemy Websockets
 
 **Version 2.0.0**
 
+**Fork Version 0.0.1**
+
 ## Protocol Support
 
 Alchemy websockets supports:
