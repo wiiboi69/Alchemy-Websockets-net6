@@ -1,7 +1,7 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alchemy", "src\Alchemy\Alchemy.csproj", "{45486CDE-86A3-4769-952F-E0821BF79493}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Alchemy", "src\Alchemy\Alchemy.csproj", "{45486CDE-86A3-4769-952F-E0821BF79493}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{32470B4C-0665-44B9-9A55-AF9C671FDAA5}"
 EndProject
@@ -13,11 +13,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Unit", "Unit", "{A8BCA98B-1
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Alchemy", "Alchemy", "{DEF8E4AE-D1A2-4C33-A4EC-A51BDF6BD09F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alchemy", "test\Unit\Alchemy\Alchemy.csproj", "{D62E2F92-A930-44D9-90FB-864CAF837BAE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Alchemy", "test\Unit\Alchemy\Alchemy.csproj", "{D62E2F92-A930-44D9-90FB-864CAF837BAE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Alchemy", "Alchemy", "{D629207E-B540-40F6-B2B4-5BCDD033EAD6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alchemy", "test\Integration\Alchemy\Alchemy.csproj", "{D7B6AB15-5986-4FDC-ADA8-9EF14DF8F26D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Alchemy", "test\Integration\Alchemy\Alchemy.csproj", "{D7B6AB15-5986-4FDC-ADA8-9EF14DF8F26D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
