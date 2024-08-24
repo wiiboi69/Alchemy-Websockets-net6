@@ -27,7 +27,7 @@ namespace Alchemy.Classes
         /// <summary>
         /// The data Frame that this client is currently processing.
         /// </summary>
-        public DataFrame DataFrame;
+        public DataFrame DataFrame_data;
 
         /// <summary>
         /// OnEvent Delegates specific to this connection.
