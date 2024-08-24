@@ -2,10 +2,11 @@
 
 this is a dot net6 port of Alchemy Websockets
 
-### ﻿old readme
 ---
 
 **Version 2.0.0**
+
+**Fork Version 0.0.1**
 
 ## Protocol Support
 
